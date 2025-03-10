@@ -1,0 +1,9 @@
+span {
+  &.open {
+    color: red;
+  }
+
+  &:not(.open) {
+    text-decoration: line-through;
+  }
+}
