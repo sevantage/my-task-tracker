@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Task } from './core/Task';
+import { Task } from './core/task';
+import { TasksService } from './core/tasks.service';
 import { TaskListItemComponent } from './shared/partials/task-list-item/task-list-item.component';
 
 @Component({
@@ -9,11 +10,12 @@ import { TaskListItemComponent } from './shared/partials/task-list-item/task-lis
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'my-task-tracker';
-  tasks: Task[] = [
-    { id: 123, description: 'Task 1', isOpen: true },
-    { id: 246, description: 'Task 2', isOpen: false },
-    { id: 369, description: 'Task 3', isOpen: true },
-  ];
+export class AppComponent implements OnInit {
+  tasks: Task[] = [];
+
+  constructor(private tasksSvc: TasksService) {}
+
+  ngOnInit(): void {
+    this.tasksSvc.getAll().subscribe(tasks => this.tasks = tasks);
+  }
 }

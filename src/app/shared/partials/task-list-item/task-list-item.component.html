@@ -1,5 +1,4 @@
-<span [class.open]="task().isOpen">
-    <input type="checkbox" [checked]="!task().isOpen" disabled />
-    {{ task().description }}</span
-  >
-  
+<span [class.open]="task().isDone">
+  <input type="checkbox" [checked]="!task().isDone" disabled />
+  {{ task().description }}</span
+>
