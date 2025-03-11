@@ -1,0 +1,9 @@
+<ul>
+  @for(task of tasks; track task.id) {
+  <li>
+    <a [routerLink]="[task.id]">
+      <app-task-list-item [task]="task"></app-task-list-item>
+    </a>
+  </li>
+  }
+</ul>
