@@ -20,4 +20,8 @@ export class TasksService {
     if (!id?.length) return of(undefined);
     return this.http.get<Task>(this.env.baseUrl + '/tasks/' + id);
   }
+
+  updateTask(task: Task): Observable<unknown> {
+    return this.http.put<Task>(this.env.baseUrl + '/tasks/' + task.id, task);
+  }
 }

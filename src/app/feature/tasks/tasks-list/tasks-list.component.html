@@ -4,6 +4,7 @@
     <a [routerLink]="[task.id]">
       <app-task-list-item [task]="task"></app-task-list-item>
     </a>
+    (<a [routerLink]="[task.id, 'edit']">edit</a>)
   </li>
   }
 </ul>

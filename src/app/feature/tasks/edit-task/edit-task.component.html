@@ -1,0 +1,18 @@
+<div class="container" [formGroup]="form">
+  <div class="label">Description:</div>
+  <div class="control">
+    <input class="text" formControlName="description" />
+    @if(this.description.invalid) {
+    <span class="error">Please provide a description</span>
+    }
+  </div>
+  <div class="label">Is done:</div>
+  <div class="control">
+    <input type="checkbox" formControlName="isDone" />
+  </div>
+</div>
+<div>
+  <button (click)="onSave()" [disabled]="!form.dirty || form.invalid">
+    Save
+  </button>
+</div>
