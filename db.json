@@ -1,24 +1,24 @@
 {
-    "tasks": [
-        {
-            "id": "1",
-            "description": "Write code",
-            "isDone": true
-        },
-        {
-            "id": "2",
-            "description": "Setup build server",
-            "isDone": true
-        },
-        {
-            "id": "3",
-            "description": "Design deployment pipeline",
-            "isDone": false
-        },
-        {
-            "id": "4",
-            "description": "Test deployment",
-            "isDone": false
-        }
-    ]
+  "tasks": [
+    {
+      "id": "1",
+      "description": "Write code",
+      "isDone": true
+    },
+    {
+      "id": "2",
+      "description": "Setup build server",
+      "isDone": true
+    },
+    {
+      "id": "3",
+      "description": "Design deployment pipeline",
+      "isDone": false
+    },
+    {
+      "id": "4",
+      "description": "Test deployment",
+      "isDone": false
+    }
+  ]
 }

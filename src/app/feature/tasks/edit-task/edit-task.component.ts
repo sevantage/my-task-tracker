@@ -5,13 +5,27 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { Task } from '../../../core/task';
 import { TasksService } from '../../../core/tasks.service';
 
 @Component({
   selector: 'app-edit-task',
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+  ],
   templateUrl: './edit-task.component.html',
   styleUrl: './edit-task.component.scss',
 })
@@ -39,5 +53,9 @@ export class EditTaskComponent {
     this.tasksSvc.updateTask(this.form.value as Task).subscribe(() => {
       this.router.navigate(['../..']);
     });
+  }
+
+  onAbort() {
+    this.router.navigate(['../..']);
   }
 }

@@ -1,6 +1,10 @@
-<ul>
-  <li>
-    <a [routerLink]="['/']"> Home </a>
-  </li>
-</ul>
-<router-outlet />
+<mat-toolbar>
+  <ul>
+    <li>
+      <a [routerLink]="['/']"> Home </a>
+    </li>
+  </ul>
+</mat-toolbar>
+<div class="content">
+  <router-outlet />
+</div>
