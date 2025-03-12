@@ -31,8 +31,8 @@ export class EditTaskComponent {
     });
   }
 
-  get description() {
-    return this.form.get("description") as FormControl<string>;
+  get description(): FormControl<string> {
+    return this.form.get('description') as FormControl<string>;
   }
 
   onSave() {
